@@ -3,169 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HabitTrack | Profile</title>
+    <title>HabitTrack | My Profile</title>
     <link rel="stylesheet" href="style.css">
+
     <style>
         .profile-dashboard {
             display: grid;
-            grid-template-columns: 260px 1fr;
-            gap: 22px;
+            grid-template-columns: 280px minmax(0, 1fr);
+            gap: 24px;
             align-items: start;
         }
-        .personal-bar { text-align: center; padding: 22px; }
+
+        .personal-bar {
+            text-align: center;
+            padding: 28px 22px;
+        }
+
         .personal-bar .avatar {
-            width: 75px; height: 75px; font-size: 34px;
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 14px;
+            font-size: 38px;
         }
-        .personal-bar p { margin: 12px 0; overflow-wrap: anywhere; }
-        .profile-content { display: grid; gap: 22px; min-width: 0; }
-        .profile-content h2 { margin-bottom: 16px; }
-        .profile-content h3 { margin-bottom: 8px; }
-        .profile-content .stats { margin: 0; }
-        .profile-content .stat-card { padding: 20px; }
-        .task-list { display: grid; gap: 12px; }
-        .task-row {
-            display: flex; justify-content: space-between;
-            align-items: center; gap: 12px;
-            padding: 13px; border: 1px solid #dce9e1;
-            border-radius: 10px; background: #fbfefc;
+
+        .personal-bar h2 {
+            margin-bottom: 5px;
         }
-        .task-row p { color: #65756d; font-size: 13px; margin-top: 5px; }
+
+        .personal-bar p {
+            margin: 8px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .personal-bar hr {
+            border: 0;
+            border-top: 1px solid #dce9e1;
+            margin: 20px 0;
+        }
+
+        .profile-details {
+            text-align: left;
+        }
+
+        .profile-details p {
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+        .profile-details strong {
+            color: #183c30;
+        }
+
+        .profile-action {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .profile-content {
+            display: grid;
+            gap: 22px;
+            min-width: 0;
+        }
+
+        .profile-content .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 0;
+        }
+
+        .profile-content .stat-card {
+            padding: 20px;
+            min-width: 0;
+        }
+
+        .stat-card h3 {
+            font-size: 27px;
+            margin: 8px 0;
+        }
+
+        .activity-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .activity-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            border: 1px solid #dce9e1;
+            border-radius: 10px;
+            background: #fbfefc;
+        }
+
+        .activity-item h3 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .activity-item p {
+            font-size: 13px;
+            color: #65756d;
+            margin: 0;
+        }
+
         .task-status {
-            font-size: 12px; font-weight: bold; white-space: nowrap;
-            padding: 6px 10px; border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 6px 11px;
+            border-radius: 20px;
+            white-space: nowrap;
         }
-        .completed { background: #e8f6ed; color: #247747; }
-        .pending { background: #fff3dc; color: #93620b; }
-        .profile-two-columns {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+
+        .completed {
+            background: #e8f6ed;
+            color: #247747;
         }
-        .goal-item { margin: 15px 0; }
-        .goal-item p { margin-bottom: 8px; }
-        .mini-progress {
-            height: 8px; border-radius: 10px;
-            background: #e8f0eb; overflow: hidden;
+
+        .pending {
+            background: #fff3dc;
+            color: #93620b;
         }
-        .mini-progress span {
-            display: block; height: 100%;
-            background: #32a36b; border-radius: 10px;
+
+        .goal-card {
+            padding: 22px;
         }
-        .achievement { padding: 12px 0; border-bottom: 1px solid #dce9e1; }
-        .achievement:last-child { border-bottom: 0; }
-        @media(max-width:800px) {
-            .profile-dashboard { grid-template-columns: 1fr; }
-            .personal-bar { text-align: center; }
-            .profile-two-columns { grid-template-columns: 1fr; }
+
+        .goal-card p {
+            margin-top: 8px;
+            color: #65756d;
+        }
+
+        @media (max-width: 800px) {
+            .profile-dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .profile-content .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-item {
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <nav>
     <div class="logo">🌱 Habit<span>Track</span></div>
+
     <div class="navlinks">
         <a href="dashboard.html">Dashboard</a>
         <a href="habits.html">My Habits</a>
         <a href="add_exercise.html">Add Exercises</a>
         <a href="progress.html">Progress</a>
     </div>
+
     <a href="index.html" class="navbtn">Logout</a>
 </nav>
 
 <section class="new-page">
+
     <div class="page-title">
-        <p class="tag">YOUR PERSONAL SPACE</p>
+        <p class="tag">YOUR ACCOUNT</p>
         <h1>My Profile</h1>
-        <p>Track your activity, manage your goals and celebrate your progress.</p>
+        <p>Manage your profile and track your fitness activity.</p>
     </div>
 
     <div class="profile-dashboard">
 
+        <!-- PROFILE INFORMATION -->
         <aside class="new-card personal-bar">
+
             <div class="avatar">👤</div>
+
             <h2>Alex Johnson</h2>
             <p class="muted">HabitTrack Member</p>
+
             <hr>
-            <p>alex@example.com</p>
-            <p>New Delhi, India</p>
-            <p>Age: 21</p>
-            <p>Joined: October 2026</p>
+
+            <div class="profile-details">
+                <p><strong>Email</strong><br>alex@example.com</p>
+
+                <p><strong>Location</strong><br>New Delhi, India</p>
+
+                <p><strong>Age</strong><br>21 Years</p>
+
+                <p><strong>Joined</strong><br>October 2026</p>
+            </div>
+
             <hr>
+
             <h3>Fitness Goal</h3>
-            <p>Build a healthy lifestyle</p>
-            <h3>My Motto</h3>
-            <p>"Consistency is the key to success."</p>
-            <a href="#edit-profile" class="btn">Edit Profile</a>
+            <p>Build a healthy lifestyle through daily exercise.</p>
+
+            <a href="#edit-profile" class="btn profile-action">
+                Edit Profile
+            </a>
+
         </aside>
 
+        <!-- PROFILE DASHBOARD -->
         <main class="profile-content">
 
+            <!-- STATISTICS -->
             <div class="stats">
+
                 <div class="stat-card">
-                    <p>Exercises Completed</p>
+                    <p>Completed</p>
                     <h3>18</h3>
-                    <p>This week</p>
+                    <p class="muted">This week</p>
                 </div>
+
                 <div class="stat-card">
-                    <p>Exercises Pending</p>
+                    <p>Pending</p>
                     <h3>4</h3>
-                    <p>Keep going!</p>
+                    <p class="muted">Remaining today</p>
                 </div>
+
                 <div class="stat-card">
                     <p>Current Streak</p>
                     <h3>7 Days</h3>
-                    <p>Great consistency</p>
+                    <p class="muted">Keep it going!</p>
                 </div>
+
             </div>
 
-            <div class="new-card">
-                <h2>Exercise Activity</h2>
-                <p class="muted">Your planned activities and their current status</p>
-                <div class="task-list">
-                    <div class="task-row">
-                        <div>
-                            <h3> Morning Run</h3>
-                            <p>30 minutes · Cardio</p>
-                        </div>
-                        <span class="task-status completed">Completed</span>
-                    </div>
-                    <div class="task-row">
-                        <div>
-                            <h3> Yoga Session</h3>
-                            <p>20 minutes · Flexibility</p>
-                        </div>
-                        <span class="task-status completed">Completed</span>
-                    </div>
-                    <div class="task-row">
-                        <div>
-                            <h3> Strength Training</h3>
-                            <p>40 minutes · Strength</p>
-                        </div>
-                        <span class="task-status pending">Pending</span>
-                    </div>
-                    <div class="task-row">
-                        <div>
-                            <h3> Evening Walk</h3>
-                            <p>25 minutes · Light activity</p>
-                        </div>
-                        <span class="task-status pending">Pending</span>
-                    </div>
-                </div>
+            <!-- FITNESS GOAL -->
+            <div class="new-card goal-card">
+
+                <h2>My Fitness Goal</h2>
+
+                <p>
+                    Stay active, exercise regularly and maintain
+                    a healthy daily routine.
+                </p>
+
             </div>
 
-           
-        </main>
+            <!-- QUICK ACTIONS -->
+<div class="new-card quick-actions">
+
+    <h2>Your Next Steps</h2>
+
+    <p class="muted">
+        Manage your routine and stay on track with your goals.
+    </p>
+
+    <div class="action-grid">
+
+        <a href="habits.html" class="action-item">
+            <div>
+                <h3>Manage Habits</h3>
+                <p>View and organise your daily habits.</p>
+            </div>
+            <span class="action-arrow">→</span>
+        </a>
+
+        <a href="add_exercise.html" class="action-item">
+            <div>
+                <h3>Add Exercise</h3>
+                <p>Add activities to your fitness routine.</p>
+            </div>
+            <span class="action-arrow">→</span>
+        </a>
+
+        <a href="progress.html" class="action-item">
+            <div>
+                <h3>View Progress</h3>
+                <p>Track your improvement and consistency.</p>
+            </div>
+            <span class="action-arrow">→</span>
+        </a>
+
     </div>
+
+</div>
+                <a href="add_exercise.html" class="btn profile-action">
+                    + Add Exercise
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
 </section>
 
 <footer>
     <div class="logo">🌱 Habit<span>Track</span></div>
+
     <p>Build habits. Stay consistent. Live better.</p>
+
     <div>
         <a href="index.html">Home</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="feedback.html">About and Feedback</a>
     </div>
+
     <small>Web Project | HabitTrack</small>
 </footer>
+
 <script src="script.js" defer></script>
 
 </body>

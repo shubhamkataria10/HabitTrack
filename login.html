@@ -33,12 +33,12 @@
 <h2>Welcome Back!</h2> 
 <p>Login to continue your HabitTrack journey.</p> 
 </div> 
-<form action="dashboard.html"> 
+<form id="login-form"> 
 <label>Email Address</label> 
-<input type="text" placeholder="Enter your email" required> 
+<input type="email" placeholder="Enter your email" autocomplete="email" required> 
 <label>Password</label> 
-<input type="password" placeholder="Enter your password" required> 
-<div class="options"> 
+<input type="password" placeholder="Enter your password" autocomplete="current-password" required> 
+<div> 
 <label><input type="checkbox"> Remember me</label> 
 </div> 
 <button type="submit">Login →</button> 
@@ -49,13 +49,13 @@
 <h2>Create Account</h2>  
 <p>Start building better habits today.</p>  
 </div>  
-<form action="dashboard.html">  
+<form id="signup-form">  
 <label>Full Name</label>  
-<input type="text" placeholder="Enter your name" required>  
+<input type="text" placeholder="Enter your name" autocomplete="name" required>  
 <label>Email Address</label>  
-<input type="text" placeholder="Enter your email" required>  
+<input type="email" placeholder="Enter your email" autocomplete="email" required>  
 <label>Password</label>  
-<input type="password" placeholder="Create a password" required>  
+<input type="password" placeholder="Create a password" autocomplete="new-password" required>  
 <label class="terms"><input type="checkbox" required> I agree to the Terms & Conditions</label>  
 <button type="submit">Create Account →</button>  
 </form>  
@@ -70,8 +70,9 @@
 <a href="index.html">Home</a> 
 <a href="feedback.html">About & Feedback</a> 
 </div> 
-<small>Web Project</small> 
+<small>Web Project | HabitTrack</small> 
 </footer> 
+ <script src="script.js" defer></script>
  
 </body> 
 </html>

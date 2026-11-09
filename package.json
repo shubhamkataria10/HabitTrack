@@ -1,0 +1,13 @@
+{
+    "name": "habittrack-project",
+    "version": "1.0.0",
+    "private": true,
+    "description": "HabitTrack college web project with Express and local JSON storage",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.21.2"
+    }
+}
