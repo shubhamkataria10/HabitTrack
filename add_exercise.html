@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HabitTrack | Add Exercises</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div class="logo">🌱 Habit<span>Track</span></div>
+    <div class="navlinks">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="habits.html">My Habits</a>
+        <a href="progress.html">Progress</a>
+         <a href="profile.html">Profile</a>
+    </div><a class="navbtn" href="index.html">Logout</a>
+</nav>
+
+<section class="new-page">
+<div class="page-title"><p class="tag">MOVE EVERY DAY</p><h1>Add Exercises</h1>
+    <p>Plan your workout and make every movement count.</p>
+</div>
+<div class="new-card exercise-form"><h2>Create an Exercise</h2><form class="new-form">
+<label>Exercise Name</label>
+<input type="text" placeholder="e.g. Morning Walk" required>
+<label>Exercise Type</label>
+<select required>
+    <option value="">Choose category</option>
+    <option>Cardio</option>
+    <option>Strength Training</option>
+    <option>Yoga</option>
+    <option>Stretching</option>
+    <option>Other</option>
+</select>
+<label>Duration (minutes)</label><input type="number" min="1" placeholder="30" required>
+<label>Schedule</label>
+<select>
+    <option>Daily</option>
+    <option>Weekdays</option>
+    <option>Weekends</option>
+</select>
+<label>Notes</label><textarea rows="3" placeholder="Add your workout goal..."></textarea>
+<button type="button">+ Add Exercise</button>
+</form></div>
+<h2 class="section-heading">Suggested Exercises</h2>
+<div class="exercise-grid">
+<div class="new-card"><div class="exercise-icon"></div>
+<h3>Running</h3><p>Improve stamina and cardiovascular health.</p><span class="streak">20–30 minutes</span></div>
+<div class="new-card"><div class="exercise-icon"></div>
+<h3>Yoga</h3><p>Improve flexibility and relax your mind.</p><span class="streak">10–20 minutes</span></div>
+<div class="new-card"><div class="exercise-icon"></div>
+<h3>Strength Training</h3><p>Build strength with simple exercises.</p><span class="streak">20–30 minutes</span></div>
+</div>
+</section>
+
+<footer><div class="logo">🌱 Habit<span>Track</span></div>
+    <p>Build habits. Stay consistent. Live better.</p>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="feedback.html">About & Feedback</a>
+    </div>
+    <small>Web Project | HabitTrack</small>
+</footer>
+
+
+    <script src="common.js" defer></script>
+    <script src="add_exercise.js" defer></script>
+</body>
+</html>
