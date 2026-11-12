@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitTrack | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🌱 Habit<span>Track</span></div>
+
+    <div class="navlinks">
+        <a href="habits.html">My Habits</a>
+        <a href="add_exercise.html">Add Exercises</a>
+        <a href="progress.html">Progress</a>
+        <a href="profile.html">Profile</a>
+    </div>
+
+    <a href="index.html" class="navbtn">Logout</a>
+</nav>
+
+
+<section class="dashboard planner-page">
+
+    <!-- WELCOME -->
+    <div class="dashboard-head">
+        <p class="tag">YOUR PERSONAL DASHBOARD</p>
+        <h1 id="dashboard-greeting">Welcome to HabitTrack </h1>
+        <p>Your daily progress at a glance.</p>    </div>
+
+
+    <!-- WELCOME BANNER -->
+    <div class="planner-banner">
+
+        <div>
+            <p class="tag">YOUR DAILY JOURNEY</p>
+            <h2>Build Better Habits.</h2>
+
+            <p>
+                Small actions every day lead to meaningful progress.
+                Stay consistent and keep moving forward.
+            </p>
+
+            <a href="habits.html" class="btn">
+                View My Habits →
+            </a>
+        </div>
+
+        <div class="planner-emoji"></div>
+
+    </div>
+
+
+    <!-- LIVE STATISTICS -->
+    <div class="section-heading">
+        <h2>Today's Overview</h2>
+        <p class="planner-subtitle">
+            Your activity based on your saved habits.
+        </p>
+    </div>
+
+    <div class="dashboard-overview">
+
+        <div class="dashboard-box overview-card">
+            <span class="overview-icon">🎯</span>
+            <p>Total Habits</p>
+            <h3 id="dash-total">0</h3>
+        </div>
+
+        <div class="dashboard-box overview-card">
+            <span class="overview-icon">✅</span>
+            <p>Completed Today</p>
+            <h3 id="dash-completed">0</h3>
+        </div>
+
+        <div class="dashboard-box overview-card">
+            <span class="overview-icon">⏳</span>
+            <p>Remaining</p>
+            <h3 id="dash-pending">0</h3>
+        </div>
+
+        <div class="dashboard-box overview-card">
+            <span class="overview-icon">🔥</span>
+            <p>Current Streak</p>
+            <h3 id="dash-streak">0 Days</h3>
+        </div>
+
+    </div>
+
+
+    <!-- DAILY ACTIVITY -->
+    <div class="dashboard-content-grid">
+
+        <!-- HABITS -->
+        <div class="dashboard-box">
+
+            <div class="dashboard-section-heading">
+                <div>
+                    <h2>Today's Habits</h2>
+                    <p class="planner-subtitle">
+                        Your daily habit checklist.
+                    </p>
+                </div>
+
+                <a href="habits.html" class="text-link">
+                    View All →
+                </a>
+            </div>
+
+            <div id="dashboard-habit-list" class="dashboard-list">
+                <p class="muted">Loading your habits...</p>
+            </div>
+
+            <div class="dashboard-progress-track">
+                <div id="dashboard-progress-bar"></div>
+            </div>
+
+            <p id="dashboard-progress-text" class="muted">
+                0% completed today
+            </p>
+
+        </div>
+
+
+        <!-- EXERCISES -->
+        <div class="dashboard-box">
+
+            <div class="dashboard-section-heading">
+                <div>
+                    <h2>My Exercises</h2>
+                    <p class="planner-subtitle">
+                        Your added exercise activities.
+                    </p>
+                </div>
+
+                <a href="add_exercise.html" class="text-link">
+                    Add New +
+                </a>
+            </div>
+
+            <div id="dashboard-exercise-list" class="dashboard-list">
+                <p class="muted">Loading your exercises...</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK ACTIONS -->
+    <div class="dashboard-box dashboard-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="dashboard-action-links">
+
+            <a href="habits.html">
+                 Manage Habits
+            </a>
+
+            <a href="add_exercise.html">
+                 Add Exercise
+            </a>
+
+            <a href="progress.html">
+                 View Progress
+            </a>
+
+            <a href="profile.html">
+                 My Profile
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="logo">🌱 Habit<span>Track</span></div>
+
+    <p>Build habits. Stay consistent. Live better.</p>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="feedback.html">About & Feedback</a>
+    </div>
+
+    <small>Web Project | HabitTrack</small>
+
+</footer>
+
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
